@@ -17,10 +17,6 @@ const llaves = {
     u: "ufat"
 };
 
-// function validarTexto($ta) {
-//     const patron = /^[a-z]+$/; //define el patrón regular de datos aceptados
-//     return !patron.test($ta);
-// }
 function convertir() {
     $ta.value = $ta.value.toLowerCase();
 }
@@ -51,7 +47,7 @@ $ta.addEventListener("input", (a) => {
 $ta.addEventListener("blur", () => {
     if (!buttonClicked) {
         const value = $ta.value;
-        const patron = /^[a-z]+$/;
+        const patron = /^[a-zñ\s]+$/;
         if (!patron.test(value)) {
             Swal.fire({
                 title: 'Escribe solo letras minusculas y sin acentos',
