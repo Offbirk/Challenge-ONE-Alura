@@ -1,85 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
   box-sizing: border-box;
-  font-family: 'Inter';
+  font-family: "Inter", serif;
   font-style: normal;
 }
 
 body{
   background: #839aec;
-}
-
-header {
-  display: flex;
-  margin: 8px;
-  width: 100%;
-  height: 48px;
-  top: 20px;
-  left: 20px;
-}
-
-.encabezado {
-  padding: 8px;
-  left: 40px;
-  right: 40px;
-}
-
-#container {
-  display:flex;
-  width: auto;
-}
-
-#contenedor {
-  min-width: 600px;
-  min-height: 300px;
-  top: 80px;
-  margin: 5px 50px 10px 40px;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 48px;
-  color: #0A3871;
-  border: none;
-  border-radius: 32px;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-}
-
-#contenedor::placeholder {
-  padding: 16px; 
-}
-
-.advertencia {
-  display: flex;
-  margin: 0 40px;
-  width: auto;
-  height: 18px;
-  font-size: 10px;
-  color: #495057;
-  justify-content: left;
-}
-
-.advertencia img {
-  display: flex;
   position: relative;
-  width: 14px;
-  height: 14px;
-  margin: 0 8px;
+  min-height: 100vh;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
 }
 
 .botones {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
 }
 
-.encriptar {
-  flex-direction: row;
-  padding: 24px;
-  width: 208px;
+input:first-child {
   background: #0A3871;
-  color: #FFFFFF;
+  color: #fff;
+}
+
+input:nth-child(2) {
+  background: #D8DFE8;
+  border: 1px solid #0A3871;
+  color: black;
+}
+
+#contenedor, .resultado {
+  display: block;
+  position: relative;
+  margin: 5px auto;
+  width: 300px;
+  min-height: 180px;
+  min-width: min-content;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.advertencia {
+  display: flex;
+  font-size: 12px;
+  color: #495057;
+  align-items: center; 
+}
+
+.advertencia img {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+}
+
+.anuncio {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+.anuncio__1 {
+  font-size: 20px;
+  color: #343A40;
+}
+
+.anuncio__2 {
+  font-size: 12px;
+  color: #495057;
+}
+
+.encriptar, .desencriptar, .copiar {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  justify-content: center;
+  margin: 5px;
+  padding: 0.8rem;
   border: none;
-  border-radius: 24px;
+  border-radius: 1.5rem;
   cursor: pointer;
 }
 
@@ -89,96 +97,11 @@ header {
   border: 1px solid #D8DFE8;
 }
 
-.desencriptar {
-  flex-direction: row;
-  margin-left: 10px;
-  padding: 24px;
-  width: 208px;
-  background-color: #D8DFE8;
-  border: 1px solid #0A3871;
-  border-radius: 24px;
-  cursor: pointer;
-}
-
 .desencriptar:hover {
   background: #868e99;
   border: 1px solid #0A3871;
   color: black;
   font: bold;
-}
-
-.anuncio {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 400px;
-  height: 400px;
-  background: #FFFFFF;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  border-radius: 32px;
-}
-
-.resultado {
-  margin-top: 10px;
-  min-width: 336px;
-  min-height: 350px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 36px;
-  color: #495057;
-  border: none;
-}
-
-.munheco {
-  display: block;
-  position: absolute;
-  width: 306px;
-  height: 280px;
-  top: 43px;
-  left: 32px;
-}
-
-.anuncio__1 {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  width: 336px;
-  height: 58px;
-  top: 300px;
-  left: 32px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 29px;
-  color: #343A40;
-}
-
-.anuncio__2 {
-  display: flex;
-  position: absolute;
-  width: 336px;
-  height: 48px;
-  top: 330px;
-  left: 32px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 24px;
-  justify-content: center;
-  color: #495057;
-}
-
-.copiar {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  width: 250px;
-  height: 67px;
-  top: 350px;
-  left: 80px;
-  padding: 24px;
-  border: 1px solid #0A3871;
-  border-radius: 24px;
-  cursor: pointer;
 }
 
 .copiar:hover {
@@ -188,59 +111,95 @@ header {
   font: bold;
 }
 
+.mensaje {
+  position: absolute;
+  top: 5px;
+}
+
+.munheco {
+  display: flex;
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+}
+
 footer {
   display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
   justify-content: center;
-  width: auto;
-  height: 70px;
-  top: 480px;
-  padding: 8px;
-  margin: 8px 0 0;
-  border: none;
-  border-radius: 24px;
-  box-shadow: 8px 24px 32px 8px rgba(0, 0, 0, 0.08);
-  line-height: 36px;
-  background: #FFFFFF;
 }
 
-#linkedin-logo img {
-  position: relative;
-  width: 45px;
+#linkedin-logo, #github-logo {
+  display: flex;
+  width: 40px;
   height: 40px;
-  margin-right: 10px;
+  padding: 5px;
 }
 
-#github-logo img {
-  position: relative;
-  width: 45px;
-  height: 38px;
-  margin-left: 10px;
-}
-
-@media screen and (max-width: 960px) {
+@media (min-width: 1000px) {
   #container {
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
   }
-  #contenedor {
-    justify-content: center;
+  .principal, .anuncio {
+    width: 50%;
   }
-  .advertencia {
-    justify-content: center;
+  #contenedor, .resultado {
+    width: 400px;
+    height: 300px;
     font-size: 20px;
   }
-  .anuncio {
-    margin: 0 auto;
-  }
-  footer {
-    margin: 20px 0 0;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  #container {
+  .mensaje {
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    top: 20px;
+    width: 400px;
+    height: 300px;
+  }
+  .munheco {
+    width: 60%;
+    height: 60%;
+  }
+  #linkedin-logo, #github-logo {
+    width: 80px;
+    height: 80px;
   }
 }
 
+@media (min-width: 600px) {
+  #container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  #contenedor, .resultado {
+    width: 300px;
+    font-size: 20px;
+  }
+  .mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    bottom: 1rem;
+    width: 400px;
+  }
+  .munheco {
+    width: 50%;
+    height: 60%;
+  }
+  #linkedin-logo, #github-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
